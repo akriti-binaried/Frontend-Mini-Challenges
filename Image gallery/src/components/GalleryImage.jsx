@@ -12,12 +12,12 @@ const GalleryImage = () => {
 
   return (
     <>
-      {/* Heading */}
+      
       <div className="flex justify-center items-center">
         <p className='text-black underline mt-4'>Click on an image!</p>
       </div>
 
-      {/* Gallery Grid */}
+      
       <div className='flex justify-center items-center'>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mt-5">
           {images.map((img, idx) => (
@@ -32,13 +32,13 @@ const GalleryImage = () => {
         </div>
       </div>
 
-      {/* Selected Image */}
+      
       {selectedImg && (
         <div className="mt-6 flex flex-col justify-center items-center">
-          {/* Text above image */}
+          
           <p className='mb-2 font-semibold text-gray-700'>Selected Image</p>
 
-          {/* Image */}
+          
           <img
             src={selectedImg}
             alt="enlarged"
