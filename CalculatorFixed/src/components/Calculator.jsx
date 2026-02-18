@@ -4,27 +4,27 @@ const Calculator = () => {
 
   const [input, setInput] = useState("");
 
-  // number click
+  
   const handleNumber = (num) => {
     setInput(input + num);
   };
 
-  // operator click
+
   const handleOperator = (op) => {
     setInput(input + op);
   };
 
-  // clear
+  
   const handleClear = () => {
     setInput("");
   };
 
-  // delete last character
+  
   const handleDelete = () => {
     setInput(input.slice(0, -1));
   };
 
-  // calculate result
+ 
   const handleEqual = () => {
     try {
       const result = eval(input);
@@ -34,7 +34,7 @@ const Calculator = () => {
     }
   };
 
-  // square
+  
   const handleSquare = () => {
     try {
       setInput((eval(input) ** 2).toString());
@@ -43,7 +43,7 @@ const Calculator = () => {
     }
   };
 
-  // sqrt
+  
   const handleSqrt = () => {
     try {
       setInput(Math.sqrt(eval(input)).toString());
@@ -52,7 +52,7 @@ const Calculator = () => {
     }
   };
 
-  // power
+  
   const handlePower = () => {
     setInput(input + "**");
   };
@@ -62,12 +62,12 @@ const Calculator = () => {
 
       <div className="bg-green-200 p-6 rounded-3xl w-[350px]">
 
-        {/* Display */}
+        
         <div className="bg-black text-white h-[70px] rounded-xl flex items-center justify-end px-4 text-2xl mb-5">
           {input || "0"}
         </div>
 
-        {/* Buttons */}
+       
         <div className="grid grid-cols-4 gap-4">
 
           <button onClick={handleClear} className="btn-orange">Clear</button>
@@ -102,7 +102,7 @@ const Calculator = () => {
 
       </div>
 
-      {/* styles */}
+     
       <style>
         {`
           .btn-green {
