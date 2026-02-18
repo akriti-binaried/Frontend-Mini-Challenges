@@ -25,19 +25,19 @@ const faqs = [
 
 const Accordion = () => {
   const [multipleOpen, setMultipleOpen] = useState(false);
-  const [openIndex, setOpenIndex] = useState(null); // for single open
-  const [openIndexes, setOpenIndexes] = useState([]); // for multiple open
+  const [openIndex, setOpenIndex] = useState(null); 
+  const [openIndexes, setOpenIndexes] = useState([]); 
 
   const toggleAccordion = (idx) => {
     if (multipleOpen) {
-      // Multiple accordions allowed
+     
       if (openIndexes.includes(idx)) {
         setOpenIndexes(openIndexes.filter(i => i !== idx));
       } else {
         setOpenIndexes([...openIndexes, idx]);
       }
     } else {
-      // Only single accordion allowed
+      
       setOpenIndex(openIndex === idx ? null : idx);
     }
   };
