@@ -66,12 +66,12 @@ const TicTacToe = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
 
-      {/* Status */}
+      
       <h1 className="text-xl sm:text-2xl font-bold mb-4">
         Status: {status}
       </h1>
 
-      {/* Score */}
+      
       <div className="flex gap-6 sm:gap-12 mb-6 text-center">
         <div className="font-bold text-lg">
           <p>X</p>
@@ -89,7 +89,7 @@ const TicTacToe = () => {
         </div>
       </div>
 
-      {/* Board */}
+     
       <div className="grid grid-cols-3 ">
         {board.map((cell, index) => (
           <button
@@ -107,7 +107,7 @@ const TicTacToe = () => {
         ))}
       </div>
 
-      {/* Rematch Button */}
+     
       <button
         onClick={rematch}
         className="mt-6 px-6 py-3 bg-gray-300 hover:bg-gray-400
