@@ -1,0 +1,22 @@
+body{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  gap: 13px;
+}
+
+span{
+  font-size: 55px;
+}
+
+.colored{
+  color:rgb(255,128,0) ;
+}
+
+.uncolored{
+  color: black;
+}
