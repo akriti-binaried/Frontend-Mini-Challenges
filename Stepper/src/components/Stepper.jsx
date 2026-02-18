@@ -6,7 +6,7 @@ const Stepper = ({ stepsConfig = [] }) => {
   const [margins, setMargins] = useState({ marginLeft: 0, marginRight: 0 });
   const stepRef = useRef([]);
 
-  // Calculate margins for progress bar alignment
+  
   useEffect(() => {
     if (stepRef.current.length > 0) {
       setMargins({
@@ -30,7 +30,7 @@ const Stepper = ({ stepsConfig = [] }) => {
   const handlePrev = () => {
     setCurrentStep((prevStep) => {
       if (prevStep > 1) {
-        setIsComplete(false); // Reset completion if going back
+        setIsComplete(false); 
         return prevStep - 1;
       }
       return prevStep;
