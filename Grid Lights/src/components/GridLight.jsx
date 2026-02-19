@@ -7,10 +7,10 @@ const GridLight = () => {
   const [delay, setDelay] = useState(700);
   const [isConfigOpen, setIsConfigOpen] = useState(false);
 
-  // Grid config jo gridSize ke hisaab se boxes banata hai
+  
   const config = useMemo(() => {
-    // Ab koi bhi box khali nahi rahega, saare '1' honge
-    return Array(gridSize * gridSize).fill(1);
+   
+   return Array(gridSize * gridSize).fill(1);
   }, [gridSize]);
   
   const activateBox = (index) => {
@@ -18,7 +18,7 @@ const GridLight = () => {
     const newOrder = [...order, index];
     setOrder(newOrder);
 
-    // Jab saare boxes select ho jayein
+    
     if (newOrder.length === config.length) {
       deactivateBoxes(newOrder);
     }
@@ -54,7 +54,7 @@ const GridLight = () => {
 </div>
     <div className="relative min-h-screen bg-white flex items-center justify-center p-6">
       
-      {/* --- Floating Config Panel --- */}
+     
       <div className="fixed top-5 right-5 z-50 flex flex-col items-end">
         <div className="bg-[#1a1c23] text-white rounded-lg shadow-2xl min-w-[280px] border border-gray-700">
           <div 
@@ -99,7 +99,7 @@ const GridLight = () => {
         </div>
       </div>
 
-      {/* --- Main Grid Area: Size adjust according to gridSize --- */}
+     
       <div 
         className="grid gap-4 w-full max-w-[600px] transition-all duration-300"
         style={{ 
