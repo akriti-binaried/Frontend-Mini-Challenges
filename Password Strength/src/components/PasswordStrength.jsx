@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const PasswordStrengthChecker = () => {
   const [password, setPassword] = useState('');
 
-  // Checks for different criteria
+
   const hasLowercase = /[a-z]/.test(password);
   const hasUppercase = /[A-Z]/.test(password);
   const hasNumber = /[0-9]/.test(password);
